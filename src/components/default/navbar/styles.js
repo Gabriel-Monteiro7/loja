@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { md } from "../../../styles/global";
 
-const color = "#155BE4";
 export default styled.nav`
   transition: 0.3s ease-in-out;
-  background: #155BE4 !important;
+  background: #151515 !important;
   padding: 20px 30px;
   .navbar-brand {
     font-size: 30px;
