@@ -1,13 +1,16 @@
-import React from 'react';
-import Footer from './components/default/footer/Footer'
-import NavBar from './components/default/navbar/Navbar'
+import React from "react";
+import Footer from "./components/default/footer/Footer";
+import NavBar from "./components/default/navbar/Navbar";
+import Routes from "./routes";
+import {BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
-    <>
-    <NavBar/>
-    <h1 className='my-5 py-5'>Home</h1>
-    <Footer/>
-    </>
+    <BrowserRouter>
+      <NavBar />
+      <Routes />
+      <Footer />
+    </BrowserRouter>
   );
 }
 

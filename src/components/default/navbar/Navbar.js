@@ -8,9 +8,9 @@ export default function NavBar(props) {
       className="navbar navbar-expand-lg navbar-light bg-light fixed-top"
     >
       <div className="container pr-0">
-        <a className="navbar-brand" href='/'>
+        <Link className="navbar-brand" to='/'>
           <Logo />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,9 +29,9 @@ export default function NavBar(props) {
         >
           <ul className="navbar-nav w-100 mt-2 mt-lg-0 d-lex align-items-center">
             <li className="nav-item px-1">
-              <a className="nav-link" href='/home'>
+              <Link className="nav-link" to='/home'>
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item pr-1">
               {/* <a className="nav-link" to="/equipes">
