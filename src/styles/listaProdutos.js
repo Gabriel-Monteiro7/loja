@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import {sm} from './global'
+import { sm } from "./global";
 const flexBox = css`
   display: flex;
   justify-content: flex-end;
@@ -18,22 +18,29 @@ export default styled.ul`
       background: white;
       height: 100%;
       ${flexBox}
-      a{
-        text-align:center;
+      a {
+        text-align: center;
       }
       &:hover {
         border: 1px solid #007bff;
       }
     }
     img {
-      width: 100%;
-      max-height: 250px;
-      padding: 20px;
+      width: 70%;
+      max-height: 200px;
+      padding: 15px;
+      @media (max-width: ${sm}px) {
+        width: 100%;
+        max-height: 250px;
+      }
     }
     .informacoes-produto {
       ${flexBox}
       justify-content:space-evenly;
-      height: 120px;
+      height: 125px;
+      @media (max-width: ${sm}px) {
+        justify-content: space-between;
+      }
     }
     .preco,
     .marca {
@@ -46,29 +53,33 @@ export default styled.ul`
     label {
       font-size: 13px;
     }
+    @media (max-width: ${sm}px) {
+      .titulo {
+        font-size: 11px;
+      }
+    }
     .btn-compra {
       transition: 0.3s ease-in-out;
-      margin-bottom:15px;
+      margin-bottom: 15px;
       background: #007bff;
       padding: 10px 35px;
       color: white;
       align-self: center;
       border-radius: 7px;
-      border:1px solid #007bff;
-      font-weight:bold;
-      &:hover{
-        background:white;
-        color:#007bff;
-        
+      border: 1px solid #007bff;
+      font-weight: bold;
+      &:hover {
+        background: white;
+        color: #007bff;
       }
-      @media(max-width:${sm}px){
+      @media (max-width: ${sm}px) {
         padding: 4px 16px;
-        border-radius:5px;
-        font-size:12px;
+        border-radius: 5px;
+        font-size: 12px;
+      }
     }
-    }
-    a{
-      text-decoration:none;
+    a {
+      text-decoration: none;
     }
   }
 `;

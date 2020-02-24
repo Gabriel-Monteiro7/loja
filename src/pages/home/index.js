@@ -6,18 +6,13 @@ import Section from "../../components/default/section/SectionDefault";
 import api from "../../service/api";
 import ListaProdutos from "../../components/default/ListaProdutos";
 import Filter from "../../components/default/Filter";
-import { formatPrice } from "../../util/format";
 export default function Main() {
   const [produtos, setProdutos] = useState([]);
   const [filter, setFilter] = useState("A - Z");
   useEffect(() => {
     api.get().then(response => {
-      let novosProdutos = response.data.map(produto => ({
-          ...produto,
-          precoFormatado: formatPrice(produto.preco)
-        }))
       setProdutos(
-        novosProdutos.sort((a, b) => {
+        response.data.sort((a, b) => {
           return a.titulo > b.titulo ? 1 : b.titulo > a.titulo ? -1 : 0;
         })
       )
@@ -48,9 +43,6 @@ export default function Main() {
         })
       );
     }
-    setProdutos(produtos.map((produto)=>({
-      ...produto,precoFormatado: formatPrice(produto.preco)
-    })))
   }  
   return (
     <>
