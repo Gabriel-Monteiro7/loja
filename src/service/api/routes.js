@@ -2,10 +2,9 @@ import { Router } from "express";
 
 const axios = require("axios");
 let cheerio = require("cheerio");
-let data = [];
-let iconv = require("iconv-lite");
-const puppeteer = require("puppeteer");
-
+// let data = [];
+// let iconv = require("iconv-lite");
+// const puppeteer = require("puppeteer");
 const routes = new Router();
 
 routes.get("/", (req, res) => {
@@ -24,9 +23,9 @@ routes.get("/", (req, res) => {
         labelMarca: $(element)
           .find(".product-box-brand")
           .text(),
-        preco: $(element)
+        preco: parseFloat($(element)
           .find(".product-box-price-from")
-          .text()
+          .text().slice(3).replace('.','').replace(',','.'))
       });
     });
     value.shift()

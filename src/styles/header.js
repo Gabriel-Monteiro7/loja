@@ -26,6 +26,7 @@ export const Header = styled.header`
         text-align:center;
         width: 100%;
     }
-  
-
+  span{
+    font-weight:bold;
+  }
 `;
