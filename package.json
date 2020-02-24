@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"nodemon ./src/service/api/serve.js\"",
-    "build": "react-scripts build",
+    "build": "concurrently \"react-scripts build\" \"nodemon ./src/service/api/serve.js\"" ,
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
