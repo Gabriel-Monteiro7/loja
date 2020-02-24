@@ -25,7 +25,10 @@ routes.get("/", (req, res) => {
           .text(),
         preco: parseFloat($(element)
           .find(".product-box-price-from")
-          .text().slice(3).replace('.','').replace(',','.'))
+          .text().slice(3).replace('.','').replace(',','.')),
+        precoFormatado:$(element)
+        .find(".product-box-price-from")
+        .text()
       });
     });
     value.shift()

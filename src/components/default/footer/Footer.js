@@ -29,7 +29,7 @@ export default function Footer() {
               <a href="https://twitter.com/login?lang=pt" title = "Ir para pagina no Twitter">
                 <FaTwitter />
               </a>
-              <a href="https://github.com/" title = "Ir para pagina no GitHub">
+              <a href="https://github.com/Gabriel-Monteiro7" title = "Ir para pagina no GitHub">
                 <FaGithubAlt />
               </a>
             </div>
