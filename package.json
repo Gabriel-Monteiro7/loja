@@ -27,13 +27,15 @@
     "react-scripts": "3.4.0",
     "react-toastify": "^5.5.0",
     "reactotron-react-js": "^3.3.7",
+    "serverless-http": "^2.3.1",
     "styled-components": "^5.0.0",
     "sucrase": "^3.12.1",
-    "yup": "^0.28.1"
+    "yup": "^0.28.1",
+    "netlify-lambda": "^1.4.3"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"nodemon ./src/service/api/serve.js\"",
-    "build": "concurrently \"react-scripts build\" \"nodemon ./src/service/api/serve.js\"" ,
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

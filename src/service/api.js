@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 let api = axios.create({
-    baseURL:'http://localhost:3001',
+    baseURL:'https://api-de-produtos.herokuapp.com/',
 
 })
 
