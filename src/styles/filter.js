@@ -3,6 +3,12 @@ import styled from "styled-components";
 export default styled.div`
   text-align: end;
   margin-right: 8px;
+  display: flex;
+  flex-direction: row;
+  color: #155be4;
+  font-weight: 900;
+  align-items: center;
+  justify-content: flex-end;
   .btn-drop,
   .dropdown-menu {
     padding: 8px;
@@ -15,7 +21,7 @@ export default styled.div`
     color: #151515;
     font-size: 15px;
     text-align: initial;
-    font-weight:bold;
+    font-weight: bold;
   }
 
   .dropdown-menu {
@@ -33,7 +39,7 @@ export default styled.div`
   .btn-drop {
     display: flex;
     justify-content: space-between;
-    margin: 0px 0px 0px auto;
-    align-items:center;
+    align-items: center;
+    margin-left:8px;
   }
 `;

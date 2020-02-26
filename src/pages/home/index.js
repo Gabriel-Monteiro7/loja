@@ -6,18 +6,26 @@ import Section from "../../components/default/section/SectionDefault";
 import api from "../../service/api";
 import ListaProdutos from "../../components/default/ListaProdutos";
 import Filter from "../../components/default/Filter";
+import Paginacao from "../../components/default/Paginacao";
 export default function Main() {
   const [produtos, setProdutos] = useState([]);
   const [filter, setFilter] = useState("A - Z");
+  const [page, setPage] = useState(1);
   useEffect(() => {
-    api.get().then(response => {
+    setProdutos([]);
+    api.get("" + page).then(response => {
       setProdutos(
         response.data.sort((a, b) => {
           return a.titulo > b.titulo ? 1 : b.titulo > a.titulo ? -1 : 0;
         })
-      )
-    })
-  }, []);
+      );
+      if (response.data.length===0 || response.data === false) {
+        alert('Não existe mais produtos, será redirecionado para primeira página')
+        setPage(1)
+      }
+      window.scroll(0, 0);
+    });
+  }, [page]);
   function handleFilterUpdate(value) {
     setFilter(value);
     if (value === "A - Z" || value === "Z - A") {
@@ -43,7 +51,10 @@ export default function Main() {
         })
       );
     }
-  }  
+  }
+  function handlePageUpdate(value) {
+    setPage(value);
+  }
   return (
     <>
       <Section background={"#F8F8F8"}>
@@ -72,6 +83,12 @@ export default function Main() {
             />
           </div>
         )}
+        <Paginacao
+          page={page}
+          handlePageUpdate={page => {
+            handlePageUpdate(page);
+          }}
+        />
       </Section>
     </>
   );

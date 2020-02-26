@@ -22,7 +22,7 @@ export default styled.ul`
         text-align: center;
       }
       &:hover {
-        border: 1px solid #007bff;
+        border: 1px solid #155be4;
       }
     }
     img {
@@ -61,16 +61,16 @@ export default styled.ul`
     .btn-compra {
       transition: 0.3s ease-in-out;
       margin-bottom: 15px;
-      background: #007bff;
+      background: #155be4;
       padding: 10px 35px;
       color: white;
       align-self: center;
       border-radius: 7px;
-      border: 1px solid #007bff;
+      border: 1px solid #155be4;
       font-weight: bold;
       &:hover {
         background: white;
-        color: #007bff;
+        color: #155be4;
       }
       @media (max-width: ${sm}px) {
         padding: 4px 16px;
@@ -81,5 +81,7 @@ export default styled.ul`
     a {
       text-decoration: none;
     }
+  }
+  .page-item{
   }
 `;
