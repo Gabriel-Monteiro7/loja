@@ -4,5 +4,6 @@ import {} from 'styled-components'
 export default styled.div`
     /* min-height: 100vh; */
     padding: 30px 0px 90px 0px;
-    background: ${props=> props.background !== undefined ? props.background : ''}
+    background: ${props=> props.background !== undefined ? props.background : ''};
+    
 `;

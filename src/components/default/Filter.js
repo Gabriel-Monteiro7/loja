@@ -5,6 +5,7 @@ import StylesFilter from "../../styles/filter";
 export default function Filter({ filter,handleFilterUpdate }) {
   return (
     <StylesFilter className="dropdown">
+      Ordenar por: 
       <button
         className="btn-drop"
         type="button"
