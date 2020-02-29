@@ -18,10 +18,9 @@ export default function Carrinho() {
     let valor = 0;
     produtosComprados.map((value)=>{
       return valor+=value.preco*value.comprados
+      
     })
     setValorTotal(formatPrice(valor))
-    
-    
   },[produtosComprados])
 
 
@@ -71,7 +70,7 @@ export default function Carrinho() {
                 </button>
               </div>
               <div className="produto-subTotal col-3">
-                <span className="label-subTotal">{produto.precoFormatado}</span>
+                <span className="label-subTotal">{produto.subTotal}</span>
                 <button
                   title="Excluir produto"
                   className={`btn-excluir `}

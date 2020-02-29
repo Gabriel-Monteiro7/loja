@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-globals */
 import React, { createContext, useState, useEffect } from "react";
 import api from "../service/api";
+import {formatPrice} from '../util/format'
 
 export const ProdutosContext = createContext();
 
@@ -69,6 +70,7 @@ const ProdutosContextProvider = props => {
       });
       if (retorno.length === 0) {
         value.comprados = 1;
+        value.subTotal = formatPrice(value.comprados*value.preco)
         produto.push(value);
         setProdutoscomprado(
           produto.map(valueAux => {
@@ -77,6 +79,7 @@ const ProdutosContextProvider = props => {
         );
       } else {
         retorno[0].comprados += 1;
+        value.subTotal = formatPrice(value.comprados*value.preco)
         setProdutoscomprado(
           produto.map(valueAux => {
             return valueAux.titulo === value.titulo ? retorno[0] : valueAux;
