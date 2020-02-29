@@ -2,7 +2,7 @@ import React from "react";
 
 // import { Container } from './styles';
 import StylesPaginacao from "../../styles/paginacao";
-export default function components({ page, handlePageUpdate }) {
+export default function components({ page, handlePageUpdate, proximo }) {
   return (
     <StylesPaginacao className="container">
       <ul className="pagination pagination-sm justify-content-end">
@@ -38,24 +38,28 @@ export default function components({ page, handlePageUpdate }) {
             <span className="sr-only">(current)</span>
           </span>
         </li>
-        <li
-          className="page-item"
-          onClick={() => {
-            handlePageUpdate(page + 1);
-          }}
-        >
-          <span className="page-link">{page + 1}</span>
-        </li>
-        <li className="page-item">
-          <span
-            className="page-link"
-            onClick={() => {
-              handlePageUpdate(page + 1);
-            }}
-          >
-            Next
-          </span>
-        </li>
+        {proximo ? (
+          <>
+            <li
+              className="page-item"
+              onClick={() => {
+                handlePageUpdate(page + 1);
+              }}
+            >
+              <span className="page-link">{page + 1}</span>
+            </li>
+            <li className="page-item">
+              <span
+                className="page-link"
+                onClick={() => {
+                  handlePageUpdate(page + 1);
+                }}
+              >
+                Next
+              </span>
+            </li>
+          </>
+        ) : <></>}
       </ul>
     </StylesPaginacao>
   );

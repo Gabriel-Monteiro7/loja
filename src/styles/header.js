@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {sm} from './global'
 export const Header = styled.header`
   margin-top: 150px;
+  margin-bottom:20px;
   width: 55%;
   text-align: justify;
   &:after {
@@ -28,5 +29,9 @@ export const Header = styled.header`
     }
   span{
     font-weight:bold;
+    margin-left:108px;
+    @media(max-width:${sm}px){
+      margin-left:0;
+    }
   }
 `;

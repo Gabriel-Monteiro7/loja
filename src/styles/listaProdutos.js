@@ -18,7 +18,7 @@ export default styled.ul`
       background: white;
       height: 100%;
       ${flexBox}
-      a {
+      button {
         text-align: center;
       }
       &:hover {
@@ -68,20 +68,21 @@ export default styled.ul`
       border-radius: 7px;
       border: 1px solid #155be4;
       font-weight: bold;
+      font-size:14px;
       &:hover {
         background: white;
         color: #155be4;
       }
       @media (max-width: ${sm}px) {
-        padding: 4px 16px;
+        padding: 6px 16px;
         border-radius: 5px;
-        font-size: 12px;
+        font-size: 13px;
       }
     }
     a {
       text-decoration: none;
     }
   }
-  .page-item{
+  .page-item {
   }
 `;

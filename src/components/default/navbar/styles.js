@@ -31,4 +31,30 @@ export default styled.nav`
       width: 100%;
     }
   }
+  .bag {
+    position: relative;z
+    a {
+      text-decoration: none;
+    }
+    svg {
+      font-size: 20px;
+      margin-bottom: 5px;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    span {
+      border-radius: 100%;
+      right: -16px;
+      position: absolute;
+      font-size: 11px;
+      top: -4px;
+      text-align: center;
+      color: white;
+      height: 16px;
+      width: 17px;
+      background: #ff0040;
+    }
+  }
 `;
