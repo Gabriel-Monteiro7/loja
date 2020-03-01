@@ -7,6 +7,7 @@ export default styled.div`
   margin-top: 55px;
   border-radius: 10px;
   padding: 40px;
+  margin-top: 120px;
   @media (max-width: ${sm}px) {
     padding: 40px 0px;
     .produto-subTotal,
@@ -22,7 +23,7 @@ export default styled.div`
   img {
     height: 100px;
     @media (max-width: ${sm}px) {
-      height: 60px;
+      height: 55px;
     }
   }
   .row {
@@ -48,6 +49,7 @@ export default styled.div`
         .titulo,
         .label-subTotal {
           font-size: 10px;
+          display: block;
         }
         input {
           width: 30px;
@@ -101,6 +103,7 @@ export default styled.div`
   }
   .titulo {
     font-size: 12px;
+    display: block;
   }
   .footer-carrinho {
     border-top: 1px solid #f2f2f2;

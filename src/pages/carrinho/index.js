@@ -47,7 +47,6 @@ export default function Carrinho() {
               </div>
               <div className="produto-titulo col-4">
                 <span className="titulo">{produto.titulo} </span>
-                <br />
                 <span>{produto.precoFormatado}</span>
               </div>
               <div className="produto-input col-3">
