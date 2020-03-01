@@ -5,6 +5,6 @@ import { FaCanadianMapleLeaf } from "react-icons/fa";
 import StyledLogo from "../../styles/logo"
 export default function Logo() {
   return (
-    <StyledLogo><FaCanadianMapleLeaf /> Go</StyledLogo>
+    <StyledLogo><FaCanadianMapleLeaf />Toy Go</StyledLogo>
   );
 }
